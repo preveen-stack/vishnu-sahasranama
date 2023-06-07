@@ -226,10 +226,18 @@ class _MyHomePageState extends State<MyHomePage> {
               textAlign: TextAlign.center,
               style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.0),
             ),
-            new Text(
-              _verses[_counter],
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.displayMedium,
+            GestureDetector(
+              onTap: _incrementCounter,
+              child: Container(
+                //color: Colors.yellow.shade600,
+                padding: const EdgeInsets.all(8),
+                // Change button text when light changes state.
+                child: new Text(
+                  _verses[_counter],
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+              ),
             ),
           ],
         ),
