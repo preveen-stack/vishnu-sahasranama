@@ -216,12 +216,19 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            new Image.asset(
+              "images/vishnu.jpg",
+              height : 200.0,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            new Text(
+              '॥ हरिः ॐ ॥',
+              textAlign: TextAlign.center,
+              style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.0),
+            ),
+            new Text(
+              _verses[_counter],
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           ],
         ),
