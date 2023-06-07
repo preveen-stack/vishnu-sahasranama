@@ -229,16 +229,15 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector(
               onTap: _incrementCounter,
               child: Container(
-                color: Colors.yellow.shade600,
+                //color: Colors.yellow.shade600,
                 padding: const EdgeInsets.all(8),
                 // Change button text when light changes state.
-                child: Text('gesturedetect'),
+                child: new Text(
+                  _verses[_counter],
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
               ),
-            ),
-            new Text(
-              _verses[_counter],
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.displayMedium,
             ),
           ],
         ),
