@@ -228,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
             new Text(
               _verses[_counter],
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           ],
         ),
