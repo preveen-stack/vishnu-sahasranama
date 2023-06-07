@@ -1,5 +1,9 @@
 # vishnusahasranama
 
+## screenshot
+![image](https://github.com/preveen-stack/vishnu-sahasranama/assets/31464911/930458fd-a708-4f9c-ba8e-d8cdda065399)
+
+
 ## Verses
 ```
 " विश्वं विष्णुर्वषट्कारो भूतभव्यभवत्प्रभुः।\nभूतकृद्भूतभृद्भावो भूतात्मा भूतभावनः॥\n१॥",
