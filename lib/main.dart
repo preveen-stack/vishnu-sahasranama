@@ -56,6 +56,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _version = 'Unknown';
   
   List<String> _verses = [
     " विश्वं विष्णुर्वषट्कारो भूतभव्यभवत्प्रभुः।\nभूतकृद्भूतभृद्भावो भूतात्मा भूतभावनः॥\n१॥",
@@ -178,6 +179,19 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
       if (_counter == 108) _counter = 0;
     });
+  }
+  
+  Future<void> getVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      _version = packageInfo.version;
+    });
+  }
+  
+  @override
+  void initState() {
+    super.initState();
+    getVersion();
   }
 
   @override
