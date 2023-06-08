@@ -243,11 +243,11 @@ class _MyHomePageState extends State<MyHomePage> {
               onHorizontalDragEnd: (DragEndDetails details) {
                 if (details.velocity.pixelsPerSecond.dx < 0) {
                   // Swiped left
-                  _incrementCounter()
+                  _incrementCounter();
                 }
                 if (details.velocity.pixelsPerSecond.dx > 0) {
                   // Swiped right
-                  _decrementCounter()
+                  _decrementCounter();
                 }
               },
               child: Container(
