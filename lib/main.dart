@@ -179,6 +179,18 @@ class _MyHomePageState extends State<MyHomePage> {
       if (_counter == 108) _counter = 0;
     });
   }
+  
+  void _decrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter--;
+      if (_counter == 0) _counter = 108;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -228,6 +240,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             GestureDetector(
               onTap: _incrementCounter,
+              onHorizontalDragEnd: (DragEndDetails details) {
+                if (details.velocity.pixelsPerSecond.dx < 0) {
+                  // Swiped left
+                  _incrementCounter()
+                }
+                if (details.velocity.pixelsPerSecond.dx > 0) {
+                  // Swiped right
+                  _decrementCounter()
+                }
+              },
               child: Container(
                 //color: Colors.yellow.shade600,
                 padding: const EdgeInsets.all(8),
