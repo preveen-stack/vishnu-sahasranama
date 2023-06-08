@@ -252,6 +252,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
+                child: new Text(
+                  'v$_version',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.displaySmall,
+                ),
               ),
             ),
           ],
