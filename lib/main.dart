@@ -254,7 +254,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            child: Text(
+            Text(
               'Version: $_version',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12),
