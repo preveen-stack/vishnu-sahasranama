@@ -176,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
-      if (_counter == 108) _counter = 0;
+      if (_counter == _verses.length) _counter = 0;
     });
   }
   
@@ -188,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter--;
-      if (_counter == 0) _counter = 108;
+      if (_counter == 0) _counter = _verses.length - 1;
     });
   }
 
