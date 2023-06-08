@@ -191,6 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
         _counter = _verses.length - 1;
       } else {
         _counter--;
+      }
     });
   }
 
